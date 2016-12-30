@@ -1,5 +1,8 @@
 ﻿namespace GdNet.Common
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class Page
     {
         /// <summary>
@@ -31,10 +34,11 @@
         /// </summary>
         public int ItemsPerPage { get; set; }
 
-        public Page()
-        {
-        }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="pageIndex"></param>
+        /// <param name="itemsPerPage"></param>
         public Page(int pageIndex, int itemsPerPage)
         {
             PageIndex = pageIndex;

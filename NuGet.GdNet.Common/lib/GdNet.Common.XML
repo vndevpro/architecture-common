@@ -4,39 +4,76 @@
         <name>GdNet.Common</name>
     </assembly>
     <members>
-        <member name="M:GdNet.Common.Extensions.ReflectionExtension.GetPropertyInfo``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})">
+        <member name="T:GdNet.Common.PageExtensions">
+            <summary>
+            Extension methods for <see cref="T:GdNet.Common.Page">Page</see>
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.PageExtensions.GetPageIndex(System.Nullable{System.Int32})">
+            <summary>
+            Zero based page index
+            </summary>
+        </member>
+        <member name="T:GdNet.Common.ReflectionExtensions">
+            <summary>
+            Extension methods on reflection
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.ReflectionExtensions.GetPropertyInfo``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})">
             <summary>
             Get PropertyInfo of the generic type
             </summary>
         </member>
-        <member name="M:GdNet.Common.Extensions.ReflectionExtension.GetPropertyName``1(System.Linq.Expressions.Expression{System.Func{``0}})">
+        <member name="M:GdNet.Common.ReflectionExtensions.GetPropertyName``1(System.Linq.Expressions.Expression{System.Func{``0}})">
             <summary>
             Get property name by its expression
             </summary>
         </member>
-        <member name="M:GdNet.Common.Extensions.ReflectionExtension.GetPropertyName``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})">
+        <member name="M:GdNet.Common.ReflectionExtensions.GetPropertyName``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})">
             <summary>
             Get property name by its expression
             </summary>
         </member>
-        <member name="M:GdNet.Common.Extensions.ResultExtension.ConvertTo``2(GdNet.Common.Result{``0},System.Func{``0,``1})">
+        <member name="T:GdNet.Common.ResultExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.ResultExtensions.ConvertTo``2(GdNet.Common.Result{``0},System.Func{``0,``1})">
             <summary>
             Convert a result set to another result set
             </summary>
             <param name="result">Source result set</param>
             <param name="action">The action will be performed for each item on the source result set</param>
         </member>
-        <member name="M:GdNet.Common.Extensions.ResultExtension.ConvertTo``2(System.Collections.Generic.IList{``0},System.Func{``0,``1})">
+        <member name="M:GdNet.Common.ResultExtensions.ConvertTo``2(System.Collections.Generic.IList{``0},System.Func{``0,``1})">
             <summary>
             Convert to result set
             </summary>
             <param name="result">Source result set</param>
             <param name="action">The action will be performed for each item on the source result set</param>
         </member>
-        <member name="M:GdNet.Common.Extensions.TypeExtensions.IsImplemented(System.Type,System.Type)">
+        <member name="T:GdNet.Common.TypeExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.TypeExtensions.IsImplemented(System.Type,System.Type)">
             <summary>
             Check the given type is implemented a given interface or not
             </summary>
+        </member>
+        <member name="T:GdNet.Common.Page">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.Page.#ctor(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="pageIndex"></param>
+            <param name="itemsPerPage"></param>
         </member>
         <member name="P:GdNet.Common.Page.AllItems">
             <summary>
@@ -56,6 +93,39 @@
         <member name="P:GdNet.Common.Page.ItemsPerPage">
             <summary>
             Number of items to be fetched
+            </summary>
+        </member>
+        <member name="T:GdNet.Common.Result`1">
+            <summary>
+            Object to hold a page of items
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="F:GdNet.Common.Result`1.Empty">
+            <summary>
+            An empty page of items
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.Result`1.#ctor(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            
+            </summary>
+            <param name="items"></param>
+        </member>
+        <member name="M:GdNet.Common.Result`1.#ctor(System.Collections.Generic.IList{`0})">
+            <summary>
+            
+            </summary>
+            <param name="items"></param>
+        </member>
+        <member name="P:GdNet.Common.Result`1.Items">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:GdNet.Common.Result`1.Total">
+            <summary>
+            Total number of items in data source
             </summary>
         </member>
     </members>
