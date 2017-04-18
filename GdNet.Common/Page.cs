@@ -1,7 +1,7 @@
 ﻿namespace GdNet.Common
 {
     /// <summary>
-    /// 
+    /// Pagination info
     /// </summary>
     public class Page
     {

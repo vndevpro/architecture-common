@@ -4,9 +4,45 @@
         <name>GdNet.Common</name>
     </assembly>
     <members>
+        <member name="T:GdNet.Common.Direction">
+            <summary>
+            Sort direction
+            </summary>
+        </member>
+        <member name="T:GdNet.Common.FileSizeExtensions">
+            <summary>
+            Format file size from byte to most relevent unit
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.FileSizeExtensions.FormatByteSize(System.Int64)">
+            <summary>
+            Converts a numeric value into a string that represents the number expressed as a size value in bytes,
+            kilobytes, megabytes, or gigabytes, depending on the size.
+            </summary>
+            <param name="fileSize">The numeric value to be converted.</param>
+            <returns>The converted string.</returns>
+        </member>
+        <member name="M:GdNet.Common.FileSizeExtensions.FormatByteSize(System.IO.FileInfo)">
+            <summary>
+            Converts a numeric value into a string that represents the number expressed as a size value in bytes,
+            kilobytes, megabytes, or gigabytes, depending on the size.
+            </summary>
+            <param name="fileInfo"></param>
+            <returns>The converted string.</returns>
+        </member>
         <member name="T:GdNet.Common.PageExtensions">
             <summary>
             Extension methods for <see cref="T:GdNet.Common.Page">Page</see>
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.PageExtensions.IsValid(GdNet.Common.Page)">
+            <summary>
+            Test value of the page
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.PageExtensions.GetOffset(GdNet.Common.Page)">
+            <summary>
+            Calculate offset for first item of the page
             </summary>
         </member>
         <member name="M:GdNet.Common.PageExtensions.GetPageIndex(System.Nullable{System.Int32})">
@@ -65,7 +101,7 @@
         </member>
         <member name="T:GdNet.Common.Page">
             <summary>
-            
+            Pagination info
             </summary>
         </member>
         <member name="M:GdNet.Common.Page.#ctor(System.Int32,System.Int32)">
@@ -127,6 +163,25 @@
             <summary>
             Total number of items in data source
             </summary>
+        </member>
+        <member name="T:GdNet.Common.XmlExtensions">
+            <summary>
+            Extension methods to work with XML
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.XmlExtensions.ToXml(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Returns xml document for the dictionary, root element is items and child element is item
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GdNet.Common.XmlExtensions.ParseXml(System.String)">
+            <summary>
+            Parse xml doucment to dictionary, input must be value of ToXml method
+            </summary>
+            <param name="xml"></param>
+            <returns></returns>
         </member>
     </members>
 </doc>

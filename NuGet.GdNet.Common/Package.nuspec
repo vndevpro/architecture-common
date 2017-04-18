@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>GdNet.Common</id>
-    <version>1.8.0</version>
+    <version>1.9.0</version>
     <title>GdNet.Common</title>
     <authors>RabbitSoftware</authors>
     <owners>junioho</owners>
@@ -10,6 +10,8 @@
       Base classes for general usage in any application
     </description>
     <releaseNotes>
+      Version 1.9.0
+      - Add XmlExtensions, FileSizeExtensions
       Version 1.6.0
       - Separate IdGenerators to other package Rabbit.Uniquators
       Version 1.5.0

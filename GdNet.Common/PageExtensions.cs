@@ -5,11 +5,17 @@
     /// </summary>
     public static class PageExtensions
     {
+        /// <summary>
+        /// Test value of the page
+        /// </summary>
         public static bool IsValid(this Page page)
         {
             return (page != null) && (page.PageIndex >= 0) && (page.ItemsPerPage >= 1);
         }
 
+        /// <summary>
+        /// Calculate offset for first item of the page
+        /// </summary>
         public static int GetOffset(this Page page)
         {
             return page.PageIndex * page.ItemsPerPage;
