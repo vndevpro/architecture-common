@@ -104,13 +104,6 @@
             Pagination info
             </summary>
         </member>
-        <member name="M:GdNet.Common.Page.#ctor(System.Int32,System.Int32)">
-            <summary>
-            
-            </summary>
-            <param name="pageIndex"></param>
-            <param name="itemsPerPage"></param>
-        </member>
         <member name="P:GdNet.Common.Page.AllItems">
             <summary>
             The page which contains all items
@@ -131,6 +124,13 @@
             Number of items to be fetched
             </summary>
         </member>
+        <member name="M:GdNet.Common.Page.#ctor(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="pageIndex"></param>
+            <param name="itemsPerPage"></param>
+        </member>
         <member name="T:GdNet.Common.Result`1">
             <summary>
             Object to hold a page of items
@@ -140,6 +140,16 @@
         <member name="F:GdNet.Common.Result`1.Empty">
             <summary>
             An empty page of items
+            </summary>
+        </member>
+        <member name="P:GdNet.Common.Result`1.Items">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:GdNet.Common.Result`1.Total">
+            <summary>
+            Total number of items in data source
             </summary>
         </member>
         <member name="M:GdNet.Common.Result`1.#ctor(System.Collections.Generic.IEnumerable{`0})">
@@ -154,16 +164,6 @@
             </summary>
             <param name="items"></param>
         </member>
-        <member name="P:GdNet.Common.Result`1.Items">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:GdNet.Common.Result`1.Total">
-            <summary>
-            Total number of items in data source
-            </summary>
-        </member>
         <member name="T:GdNet.Common.XmlExtensions">
             <summary>
             Extension methods to work with XML
@@ -171,7 +171,14 @@
         </member>
         <member name="M:GdNet.Common.XmlExtensions.ToXml(System.Collections.Generic.IDictionary{System.String,System.String})">
             <summary>
-            Returns xml document for the dictionary, root element is items and child element is item
+            Returns a xml document for the dictionary, root element is items and child elements are item
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GdNet.Common.XmlExtensions.ToXmlIgnoreNullOrEmpty(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Returns a xml document for the dictionary, root element is items and child elements are item (not containing any null or empty value on key/value)
             </summary>
             <param name="data"></param>
             <returns></returns>

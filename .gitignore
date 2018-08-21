@@ -154,3 +154,13 @@ $RECYCLE.BIN/
 
 # Mac desktop service store files
 .DS_Store
+/NuGet.GdNet.Common/GdNet.Common.1.9.1.symbols.nupkg
+/NuGet.GdNet.Common/GdNet.Common.1.9.1.nupkg
+/NuGet.GdNet.Common/GdNet.Common.1.9.0.nupkg.bak
+/NuGet.GdNet.Common/GdNet.Common.1.8.0.nupkg.bak
+/NuGet.GdNet.Common/GdNet.Common.1.7.0.nupkg.bak
+/NuGet.GdNet.Common/GdNet.Common.1.9.1.symbols.nupkg
+/NuGet.GdNet.Common/GdNet.Common.1.9.1.nupkg
+/NuGet.GdNet.Common/GdNet.Common.1.9.0.nupkg.bak
+/NuGet.GdNet.Common/GdNet.Common.1.8.0.nupkg.bak
+/NuGet.GdNet.Common/GdNet.Common.1.7.0.nupkg.bak
