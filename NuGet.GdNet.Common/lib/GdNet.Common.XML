@@ -9,6 +9,26 @@
             Sort direction
             </summary>
         </member>
+        <member name="T:GdNet.Common.Entities.DynPropertyEntityBase">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:GdNet.Common.Entities.IDynPropertyEntity">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:GdNet.Common.Entities.IDynPropertyEntity.MetadataXml">
+            <summary>
+            Xml data for all dyn properties
+            </summary>
+        </member>
+        <member name="F:GdNet.Common.Entities.DynPropertyEntityBase._metadata">
+            <summary>
+            Dictionary contains all dyn properties
+            </summary>
+        </member>
         <member name="T:GdNet.Common.FileSizeExtensions">
             <summary>
             Format file size from byte to most relevent unit

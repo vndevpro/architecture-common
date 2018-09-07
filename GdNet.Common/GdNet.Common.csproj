@@ -38,6 +38,8 @@
   <ItemGroup>
     <Compile Include="DictionaryExtensions.cs" />
     <Compile Include="Direction.cs" />
+    <Compile Include="Entities\DynPropertyEntityBase.cs" />
+    <Compile Include="Entities\IDynPropertyEntity.cs" />
     <Compile Include="FileSizeExtensions.cs" />
     <Compile Include="PageExtensions.cs" />
     <Compile Include="ReflectionExtensions.cs" />
