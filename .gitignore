@@ -164,3 +164,6 @@ $RECYCLE.BIN/
 /NuGet.GdNet.Common/GdNet.Common.1.9.0.nupkg.bak
 /NuGet.GdNet.Common/GdNet.Common.1.8.0.nupkg.bak
 /NuGet.GdNet.Common/GdNet.Common.1.7.0.nupkg.bak
+/.vs/Common/v15/Server/sqlite3
+*.nupkg
+*.bak

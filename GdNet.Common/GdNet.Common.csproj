@@ -36,6 +36,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DictionaryExtensions.cs" />
     <Compile Include="Direction.cs" />
     <Compile Include="FileSizeExtensions.cs" />
     <Compile Include="PageExtensions.cs" />
