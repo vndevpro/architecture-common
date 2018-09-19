@@ -4,6 +4,31 @@
         <name>GdNet.Common</name>
     </assembly>
     <members>
+        <member name="T:GdNet.Common.DictionaryExtensions">
+            <summary>
+            Extension methods for Dictionary type
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.DictionaryExtensions.AddOrSet(System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.String)">
+            <summary>
+            Adds new item into the dictionary if the key is not exist yet, otherwise update old value.
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.DictionaryExtensions.GetOrDefault(System.Collections.Generic.IDictionary{System.String,System.String},System.String)">
+            <summary>
+            Get item in a dictionary
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.DictionaryExtensions.GetOrDefault(System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.String)">
+            <summary>
+            Get item in a dictionary
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.DictionaryExtensions.ToDynamic(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Convert a dictionary to dynamic object so we can access an item by its key
+            </summary>
+        </member>
         <member name="T:GdNet.Common.Direction">
             <summary>
             Sort direction
@@ -11,7 +36,7 @@
         </member>
         <member name="T:GdNet.Common.Entities.DynPropertyEntityBase">
             <summary>
-            
+            Base class for entities support to define new properties dynamically (values are stored in a dictionary)
             </summary>
         </member>
         <member name="T:GdNet.Common.Entities.IDynPropertyEntity">
@@ -27,6 +52,21 @@
         <member name="F:GdNet.Common.Entities.DynPropertyEntityBase._metadata">
             <summary>
             Dictionary contains all dyn properties
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.Entities.DynPropertyEntityBase.SetProperty(System.String,System.String)">
+            <summary>
+            Add or change value of a property
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.Entities.DynPropertyEntityBase.GetProperty(System.String)">
+            <summary>
+            Get value of a property
+            </summary>
+        </member>
+        <member name="P:GdNet.Common.Entities.DynPropertyEntityBase.MetadataXml">
+            <summary>
+            Gets or sets dynamic properties dictionary as string
             </summary>
         </member>
         <member name="T:GdNet.Common.FileSizeExtensions">
@@ -49,6 +89,16 @@
             </summary>
             <param name="fileInfo"></param>
             <returns>The converted string.</returns>
+        </member>
+        <member name="T:GdNet.Common.ObjectExtensions">
+            <summary>
+            Extension methods for Object
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.ObjectExtensions.ToDynamic(System.Object)">
+            <summary>
+            Convert an anonymous object to dynamic object so that it's possible to use on other namespaces (eg on cshtml)
+            </summary>
         </member>
         <member name="T:GdNet.Common.PageExtensions">
             <summary>
@@ -108,6 +158,16 @@
             </summary>
             <param name="result">Source result set</param>
             <param name="action">The action will be performed for each item on the source result set</param>
+        </member>
+        <member name="T:GdNet.Common.StringExtensions">
+            <summary>
+            Extension methods for String
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.StringExtensions.TrimSafe(System.String)">
+            <summary>
+            Trim a string
+            </summary>
         </member>
         <member name="T:GdNet.Common.TypeExtensions">
             <summary>

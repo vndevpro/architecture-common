@@ -2,14 +2,18 @@
 <package >
   <metadata>
     <id>GdNet.Common</id>
-    <version>2.0.0</version>
+    <version>2.1.0</version>
     <title>GdNet.Common</title>
     <authors>RabbitSoftware</authors>
     <owners>junioho</owners>
     <description>
-      Base classes for general usage in any application
+      Base classes for general usage in any application.
+      
+      Github source: https://github.com/vndevpro/architecture-common
     </description>
     <releaseNotes>
+      Version 2.1.0
+      - Add ObjectExtensions and new methods to DynPropertyEntityBase
       Version 1.9.1
       - Add ToXmlIgnoreNullOrEmpty on XmlExtensions
       Version 1.9.0
@@ -28,11 +32,11 @@
     <summary>
     </summary>
     <language>en-US</language>
-    <projectUrl>https://nuget.org/packages/GdNet.Common</projectUrl>
+    <projectUrl>https://github.com/vndevpro/architecture-common</projectUrl>
     <iconUrl>https://nuget.org/Content/Images/packageDefaultIcon-50x50.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>http://opensource.org/licenses/Apache-2.0</licenseUrl>
-    <copyright>Copyright @RabbitSoftware 2015-2016</copyright>
+    <copyright>Copyright @RabbitSoftware 2015-2018</copyright>
     <dependencies>
     </dependencies>
     <references></references>
