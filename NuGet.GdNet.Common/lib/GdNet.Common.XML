@@ -159,6 +159,31 @@
             <param name="result">Source result set</param>
             <param name="action">The action will be performed for each item on the source result set</param>
         </member>
+        <member name="M:GdNet.Common.Services.IFileService.SaveFile(System.String,System.String)">
+            <summary>
+            Save the text into a file that is translated from virtual path
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.Services.IFileService.GetFile(System.String)">
+            <summary>
+            Get content of the file from its virtual path
+            </summary>
+        </member>
+        <member name="P:GdNet.Common.Services.OperationResult.Result">
+            <summary>
+            Result of the operation
+            </summary>
+        </member>
+        <member name="P:GdNet.Common.Services.OperationResult.Data">
+            <summary>
+            Output data returns by the operation
+            </summary>
+        </member>
+        <member name="P:GdNet.Common.Services.OperationResult.Message">
+            <summary>
+            The message output of the operation. It could be error message if Result is false
+            </summary>
+        </member>
         <member name="T:GdNet.Common.StringExtensions">
             <summary>
             Extension methods for String
@@ -167,6 +192,11 @@
         <member name="M:GdNet.Common.StringExtensions.TrimSafe(System.String)">
             <summary>
             Trim a string
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.StringExtensions.GetSafeFileName(System.String,System.String)">
+            <summary>
+            Build a safe file name from a given string candidate. The result file will have no space.
             </summary>
         </member>
         <member name="T:GdNet.Common.TypeExtensions">
