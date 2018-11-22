@@ -90,6 +90,11 @@
             <param name="fileInfo"></param>
             <returns>The converted string.</returns>
         </member>
+        <member name="M:GdNet.Common.GuidExtensions.ToShortId(System.Guid)">
+            <summary>
+            Remove all '-' characters from a GUID
+            </summary>
+        </member>
         <member name="T:GdNet.Common.ObjectExtensions">
             <summary>
             Extension methods for Object

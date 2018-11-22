@@ -41,6 +41,8 @@
     <Compile Include="Entities\DynPropertyEntityBase.cs" />
     <Compile Include="Entities\IDynPropertyEntity.cs" />
     <Compile Include="FileSizeExtensions.cs" />
+    <Compile Include="FileSizeUnit.cs" />
+    <Compile Include="GuidExtensions.cs" />
     <Compile Include="ObjectExtensions.cs" />
     <Compile Include="PageExtensions.cs" />
     <Compile Include="ReflectionExtensions.cs" />
