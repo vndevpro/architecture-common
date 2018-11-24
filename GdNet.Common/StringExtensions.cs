@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace GdNet.Common
@@ -26,9 +27,14 @@ namespace GdNet.Common
                 return string.Empty;
             }
 
-            var fileName = input.TrimSafe().Replace(" ", spaceReplacement);
+            var fileName = input.Trim().Replace(" ", spaceReplacement);
 
-            return string.Join(string.Empty, fileName.Where(x => !Path.GetInvalidFileNameChars().Contains(x)));
+            var ignoreCharacters = new List<char>(Path.GetInvalidFileNameChars())
+            {
+                '#',
+            };
+
+            return string.Join(string.Empty, fileName.Where(x => !ignoreCharacters.Contains(x)));
         }
     }
 }

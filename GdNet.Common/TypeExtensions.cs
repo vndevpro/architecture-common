@@ -32,10 +32,10 @@ namespace GdNet.Common
         public static string GetFirstGenericTypeName(this Type genericType)
         {
             var argumentType = genericType.GenericTypeArguments.First();
-            return argumentType.CalculateStrongTableName();
+            return argumentType.CalculateSafeTableName();
         }
 
-        private static string CalculateStrongTableName(this Type type)
+        private static string CalculateSafeTableName(this Type type)
         {
             var typeName = type.Name;
 
