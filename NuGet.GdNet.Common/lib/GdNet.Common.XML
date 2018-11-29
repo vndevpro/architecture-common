@@ -225,6 +225,11 @@
             Build a safe file name from a given string candidate. The result file will have no space.
             </summary>
         </member>
+        <member name="M:GdNet.Common.StringExtensions.ToVietnameseNoSign(System.String)">
+            <summary>
+            Convert unicode string to ascii
+            </summary>
+        </member>
         <member name="T:GdNet.Common.TypeExtensions">
             <summary>
             

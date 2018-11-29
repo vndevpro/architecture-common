@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Text;
 
 namespace GdNet.Common
 {
@@ -37,6 +39,22 @@ namespace GdNet.Common
             };
 
             return string.Join(string.Empty, fileName.Where(x => !ignoreCharacters.Contains(x)));
+        }
+
+        /// <summary>
+        /// Convert unicode string to ascii
+        /// </summary>
+        public static string ToVietnameseNoSign(this string input)
+        {
+            if (string.IsNullOrWhiteSpace(input))
+            {
+                return string.Empty;
+            }
+
+            var expectedChars = input.Normalize(NormalizationForm.FormD)
+                .Where(x => CharUnicodeInfo.GetUnicodeCategory(x) != UnicodeCategory.NonSpacingMark);
+
+            return new string(expectedChars.ToArray()).Replace("đ", "d").Replace("Đ", "D");
         }
     }
 }
