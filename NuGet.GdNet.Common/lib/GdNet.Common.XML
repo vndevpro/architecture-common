@@ -189,6 +189,27 @@
             The message output of the operation. It could be error message if Result is false
             </summary>
         </member>
+        <member name="T:GdNet.Common.Services.SimpleFileService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.Services.SimpleFileService.#ctor(System.String)">
+            <summary>
+            Create the service to work with a root folder
+            </summary>
+            <param name="rootFolder"></param>
+        </member>
+        <member name="M:GdNet.Common.Services.SimpleFileService.SaveFile(System.String,System.String)">
+            <summary>
+            Save string into a file
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.Services.SimpleFileService.GetFile(System.String)">
+            <summary>
+            Read all text from given file
+            </summary>
+        </member>
         <member name="T:GdNet.Common.StringExtensions">
             <summary>
             Extension methods for String

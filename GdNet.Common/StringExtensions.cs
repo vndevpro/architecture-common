@@ -32,6 +32,8 @@ namespace GdNet.Common
             var ignoreCharacters = new List<char>(Path.GetInvalidFileNameChars())
             {
                 '#',
+                '?',
+                '&'
             };
 
             return string.Join(string.Empty, fileName.Where(x => !ignoreCharacters.Contains(x)));
