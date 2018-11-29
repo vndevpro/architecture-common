@@ -12,7 +12,9 @@
       Github source: https://github.com/vndevpro/architecture-common
     </description>
     <releaseNotes>
-      Version 2.3.1:
+      Version 2.3.2
+      - File name now also ignores #, ?, "and" character
+      Version 2.3.1
       - File name now also ignores # character because it will not work if the name will be used in URL
       Version 2.2.0
       - Add IFileService
