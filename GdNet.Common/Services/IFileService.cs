@@ -1,5 +1,8 @@
 namespace GdNet.Common.Services
 {
+    /// <summary>
+    /// Simple file service
+    /// </summary>
     public interface IFileService
     {
         /// <summary>

@@ -47,6 +47,9 @@
     <Compile Include="PageExtensions.cs" />
     <Compile Include="ReflectionExtensions.cs" />
     <Compile Include="ResultExtensions.cs" />
+    <Compile Include="Services\DefaultEmailMaskingWorker.cs" />
+    <Compile Include="Services\EmailMasker.cs" />
+    <Compile Include="Services\IEmailMaskingWorker.cs" />
     <Compile Include="Services\IFileService.cs" />
     <Compile Include="Services\OperationResult.cs" />
     <Compile Include="Services\SimpleFileService.cs" />

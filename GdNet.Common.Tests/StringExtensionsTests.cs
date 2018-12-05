@@ -9,7 +9,7 @@ namespace GdNet.Common.Tests
         public void ToVietnameseNoSign()
         {
             var input = "Không Đâu";
-            
+
             var result = input.ToVietnameseNoSign();
 
             Assert.AreEqual("Khong Dau", result);

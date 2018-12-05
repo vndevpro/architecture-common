@@ -164,6 +164,48 @@
             <param name="result">Source result set</param>
             <param name="action">The action will be performed for each item on the source result set</param>
         </member>
+        <member name="T:GdNet.Common.Services.DefaultEmailMaskingWorker">
+            <summary>
+            Masking email address by replacing 50% of characters by asterik
+            </summary>
+        </member>
+        <member name="T:GdNet.Common.Services.IEmailMaskingWorker">
+            <summary>
+            Masking worker contract
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.Services.IEmailMaskingWorker.Perform(System.String)">
+            <summary>
+            Masking a given email address
+            </summary>
+            <param name="inputAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GdNet.Common.Services.DefaultEmailMaskingWorker.Perform(System.String)">
+            <summary>
+            Replace 50% of characters by asterik(s). Eg myemail@devcovery.com will be my***il@devcovery.com
+            </summary>
+        </member>
+        <member name="T:GdNet.Common.Services.EmailMasker">
+            <summary>
+            Masking the email address to not readable string to avoid spammer taking the email
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.Services.EmailMasker.Mask(System.String)">
+            <summary>
+            Masking a given email address
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.Services.EmailMasker.Mask(System.String,GdNet.Common.Services.IEmailMaskingWorker)">
+            <summary>
+            Masking a given email address
+            </summary>
+        </member>
+        <member name="T:GdNet.Common.Services.IFileService">
+            <summary>
+            Simple file service
+            </summary>
+        </member>
         <member name="M:GdNet.Common.Services.IFileService.SaveFile(System.String,System.String)">
             <summary>
             Save the text into a file that is translated from virtual path
@@ -191,7 +233,7 @@
         </member>
         <member name="T:GdNet.Common.Services.SimpleFileService">
             <summary>
-            
+            Simple file service impl
             </summary>
         </member>
         <member name="M:GdNet.Common.Services.SimpleFileService.#ctor(System.String)">

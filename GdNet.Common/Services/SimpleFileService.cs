@@ -4,7 +4,7 @@ using System.IO;
 namespace GdNet.Common.Services
 {
     /// <summary>
-    /// 
+    /// Simple file service impl
     /// </summary>
     public class SimpleFileService : IFileService
     {

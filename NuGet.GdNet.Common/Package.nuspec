@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>GdNet.Common</id>
-    <version>2.3.3</version>
+    <version>2.4.0</version>
     <title>GdNet.Common</title>
     <authors>RabbitSoftware</authors>
     <owners>junioho</owners>
@@ -12,6 +12,8 @@
       Github source: https://github.com/vndevpro/architecture-common
     </description>
     <releaseNotes>
+      Version 2.4.0
+      - Add EmailMasker
       Version 2.3.2
       - File name now also ignores #, ?, "and" character
       Version 2.3.1
