@@ -48,11 +48,15 @@
     <Compile Include="ReflectionExtensions.cs" />
     <Compile Include="ResultExtensions.cs" />
     <Compile Include="Services\DefaultEmailMaskingWorker.cs" />
+    <Compile Include="Services\DefaultStringEncryptionWorker.cs" />
     <Compile Include="Services\EmailMasker.cs" />
     <Compile Include="Services\IEmailMaskingWorker.cs" />
     <Compile Include="Services\IFileService.cs" />
+    <Compile Include="Services\IStringEncryptionWorker.cs" />
     <Compile Include="Services\OperationResult.cs" />
     <Compile Include="Services\SimpleFileService.cs" />
+    <Compile Include="Services\StringCipher.cs" />
+    <Compile Include="Services\StringEncryptor.cs" />
     <Compile Include="StringExtensions.cs" />
     <Compile Include="TypeExtensions.cs" />
     <Compile Include="Page.cs" />

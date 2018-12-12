@@ -18,7 +18,7 @@ namespace GdNet.Common.Services
         /// </summary>
         public string Mask(string emailAddress, IEmailMaskingWorker maskingWorker)
         {
-            return maskingWorker.Perform(emailAddress);
+            return maskingWorker.Mask(emailAddress);
         }
     }
 }

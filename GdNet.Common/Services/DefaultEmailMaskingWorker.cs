@@ -11,7 +11,7 @@ namespace GdNet.Common.Services
         /// <summary>
         /// Replace 50% of characters by asterik(s). Eg myemail@devcovery.com will be my***il@devcovery.com
         /// </summary>
-        public string Perform(string inputAddress)
+        public string Mask(string inputAddress)
         {
             var emailAddress = inputAddress.TrimSafe();
             var theAtIndex = emailAddress.IndexOf("@", StringComparison.InvariantCulture);

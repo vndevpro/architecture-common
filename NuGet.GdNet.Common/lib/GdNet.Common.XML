@@ -174,16 +174,34 @@
             Masking worker contract
             </summary>
         </member>
-        <member name="M:GdNet.Common.Services.IEmailMaskingWorker.Perform(System.String)">
+        <member name="M:GdNet.Common.Services.IEmailMaskingWorker.Mask(System.String)">
             <summary>
             Masking a given email address
             </summary>
-            <param name="inputAddress"></param>
-            <returns></returns>
         </member>
-        <member name="M:GdNet.Common.Services.DefaultEmailMaskingWorker.Perform(System.String)">
+        <member name="M:GdNet.Common.Services.DefaultEmailMaskingWorker.Mask(System.String)">
             <summary>
             Replace 50% of characters by asterik(s). Eg myemail@devcovery.com will be my***il@devcovery.com
+            </summary>
+        </member>
+        <member name="T:GdNet.Common.Services.DefaultStringEncryptionWorker">
+            <summary>
+            Encrypt and decrypt a string
+            </summary>
+        </member>
+        <member name="T:GdNet.Common.Services.IStringEncryptionWorker">
+            <summary>
+            Encrypt and decrypt a string
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.Services.IStringEncryptionWorker.Encrypt(System.String,System.String)">
+            <summary>
+            Encrypt a string
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.Services.IStringEncryptionWorker.Decrypt(System.String,System.String)">
+            <summary>
+            Decrypt a string
             </summary>
         </member>
         <member name="T:GdNet.Common.Services.EmailMasker">
@@ -250,6 +268,31 @@
         <member name="M:GdNet.Common.Services.SimpleFileService.GetFile(System.String)">
             <summary>
             Read all text from given file
+            </summary>
+        </member>
+        <member name="T:GdNet.Common.Services.StringEncryptor">
+            <summary>
+            Encrypt and decrypt a string
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.Services.StringEncryptor.Encrypt(System.String,System.String)">
+            <summary>
+            Encrypt a string with default worker
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.Services.StringEncryptor.Encrypt(System.String,System.String,GdNet.Common.Services.IStringEncryptionWorker)">
+            <summary>
+            Encrypt a string
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.Services.StringEncryptor.Decrypt(System.String,System.String)">
+            <summary>
+            Decrypt a string with default worker
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.Services.StringEncryptor.Decrypt(System.String,System.String,GdNet.Common.Services.IStringEncryptionWorker)">
+            <summary>
+            Decrypt a string
             </summary>
         </member>
         <member name="T:GdNet.Common.StringExtensions">

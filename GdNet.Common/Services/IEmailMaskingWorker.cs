@@ -8,8 +8,6 @@ namespace GdNet.Common.Services
         /// <summary>
         /// Masking a given email address
         /// </summary>
-        /// <param name="inputAddress"></param>
-        /// <returns></returns>
-        string Perform(string inputAddress);
+        string Mask(string inputAddress);
     }
 }
