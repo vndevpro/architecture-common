@@ -24,17 +24,17 @@ namespace GdNet.Common.Services
         /// <summary>
         /// Decrypt a string with default worker
         /// </summary>
-        public string Decrypt(string plainText, string passPhrase)
+        public string Decrypt(string cipherText, string passPhrase)
         {
-            return Decrypt(plainText, passPhrase, new DefaultStringEncryptionWorker());
+            return Decrypt(cipherText, passPhrase, new DefaultStringEncryptionWorker());
         }
 
         /// <summary>
         /// Decrypt a string
         /// </summary>
-        public string Decrypt(string plainText, string passPhrase, IStringEncryptionWorker encryptionWorker)
+        public string Decrypt(string cipherText, string passPhrase, IStringEncryptionWorker encryptionWorker)
         {
-            return encryptionWorker.Decrypt(plainText, passPhrase);
+            return encryptionWorker.Decrypt(cipherText, passPhrase);
         }
     }
 }
