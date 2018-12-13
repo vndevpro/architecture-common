@@ -1,12 +1,12 @@
 using System;
 using System.Text;
 
-namespace GdNet.Common.Services
+namespace GdNet.Common.Services.WorkersImpl
 {
     /// <summary>
     /// Masking email address by replacing 50% of characters by asterik
     /// </summary>
-    public class DefaultEmailMaskingWorker : IEmailMaskingWorker
+    internal class DefaultEmailMaskingWorker : IEmailMaskingWorker
     {
         /// <summary>
         /// Replace 50% of characters by asterik(s). Eg myemail@devcovery.com will be my***il@devcovery.com

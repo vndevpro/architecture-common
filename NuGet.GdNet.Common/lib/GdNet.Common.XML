@@ -164,7 +164,32 @@
             <param name="result">Source result set</param>
             <param name="action">The action will be performed for each item on the source result set</param>
         </member>
-        <member name="T:GdNet.Common.Services.DefaultEmailMaskingWorker">
+        <member name="T:GdNet.Common.Services.Base64SafeEncoder">
+            <summary>
+            Encode/decode to/from base64 string with safe to use for URL
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.Services.Base64SafeEncoder.Encode(System.Byte[])">
+            <summary>
+            Encode a byte array
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.Services.Base64SafeEncoder.Encode(System.String)">
+            <summary>
+            Encode a string
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.Services.Base64SafeEncoder.DecodeBytes(System.String)">
+            <summary>
+            Decode to a byte array
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.Services.Base64SafeEncoder.Decode(System.String)">
+            <summary>
+            Decode to a string
+            </summary>
+        </member>
+        <member name="T:GdNet.Common.Services.WorkersImpl.DefaultEmailMaskingWorker">
             <summary>
             Masking email address by replacing 50% of characters by asterik
             </summary>
@@ -179,12 +204,12 @@
             Masking a given email address
             </summary>
         </member>
-        <member name="M:GdNet.Common.Services.DefaultEmailMaskingWorker.Mask(System.String)">
+        <member name="M:GdNet.Common.Services.WorkersImpl.DefaultEmailMaskingWorker.Mask(System.String)">
             <summary>
             Replace 50% of characters by asterik(s). Eg myemail@devcovery.com will be my***il@devcovery.com
             </summary>
         </member>
-        <member name="T:GdNet.Common.Services.DefaultStringEncryptionWorker">
+        <member name="T:GdNet.Common.Services.WorkersImpl.DefaultStringEncryptionWorker">
             <summary>
             Encrypt and decrypt a string
             </summary>
@@ -234,6 +259,21 @@
             Get content of the file from its virtual path
             </summary>
         </member>
+        <member name="T:GdNet.Common.Services.OperationResult">
+            <summary>
+            Represent result of an operation
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.Services.OperationResult.#ctor">
+            <summary>
+            Instantiate an instance with result to false
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.Services.OperationResult.#ctor(System.Boolean)">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="P:GdNet.Common.Services.OperationResult.Result">
             <summary>
             Result of the operation
@@ -258,7 +298,6 @@
             <summary>
             Create the service to work with a root folder
             </summary>
-            <param name="rootFolder"></param>
         </member>
         <member name="M:GdNet.Common.Services.SimpleFileService.SaveFile(System.String,System.String)">
             <summary>
@@ -268,6 +307,11 @@
         <member name="M:GdNet.Common.Services.SimpleFileService.GetFile(System.String)">
             <summary>
             Read all text from given file
+            </summary>
+        </member>
+        <member name="T:GdNet.Common.Services.WorkersImpl.StringCipher">
+            <summary>
+            Source code is from https://stackoverflow.com/a/10177020/4903729
             </summary>
         </member>
         <member name="T:GdNet.Common.Services.StringEncryptor">

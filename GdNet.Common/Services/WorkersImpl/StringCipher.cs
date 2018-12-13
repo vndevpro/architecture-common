@@ -4,7 +4,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace GdNet.Common.Services
+namespace GdNet.Common.Services.WorkersImpl
 {
     /// <summary>
     /// Source code is from https://stackoverflow.com/a/10177020/4903729

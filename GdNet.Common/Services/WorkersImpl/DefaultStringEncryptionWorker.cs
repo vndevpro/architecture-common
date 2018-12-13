@@ -1,4 +1,4 @@
-namespace GdNet.Common.Services
+namespace GdNet.Common.Services.WorkersImpl
 {
     /// <summary>
     /// Encrypt and decrypt a string

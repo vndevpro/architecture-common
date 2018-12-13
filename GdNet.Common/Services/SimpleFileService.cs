@@ -13,7 +13,6 @@ namespace GdNet.Common.Services
         /// <summary>
         /// Create the service to work with a root folder
         /// </summary>
-        /// <param name="rootFolder"></param>
         public SimpleFileService(string rootFolder)
         {
             _rootFolder = rootFolder;
