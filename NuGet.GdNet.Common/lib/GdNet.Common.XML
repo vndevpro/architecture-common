@@ -261,7 +261,37 @@
         </member>
         <member name="T:GdNet.Common.Services.OperationResult">
             <summary>
+            Represent result of an operation with result default to object type
+            </summary>
+        </member>
+        <member name="T:GdNet.Common.Services.OperationResult`1">
+            <summary>
             Represent result of an operation
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.Services.OperationResult`1.#ctor">
+            <summary>
+            Instantiate an instance with result to false
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.Services.OperationResult`1.#ctor(System.Boolean)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:GdNet.Common.Services.OperationResult`1.Result">
+            <summary>
+            Result of the operation
+            </summary>
+        </member>
+        <member name="P:GdNet.Common.Services.OperationResult`1.Data">
+            <summary>
+            Output data returns by the operation
+            </summary>
+        </member>
+        <member name="P:GdNet.Common.Services.OperationResult`1.Message">
+            <summary>
+            The message output of the operation. It could be error message if Result is false
             </summary>
         </member>
         <member name="M:GdNet.Common.Services.OperationResult.#ctor">
@@ -272,21 +302,6 @@
         <member name="M:GdNet.Common.Services.OperationResult.#ctor(System.Boolean)">
             <summary>
             
-            </summary>
-        </member>
-        <member name="P:GdNet.Common.Services.OperationResult.Result">
-            <summary>
-            Result of the operation
-            </summary>
-        </member>
-        <member name="P:GdNet.Common.Services.OperationResult.Data">
-            <summary>
-            Output data returns by the operation
-            </summary>
-        </member>
-        <member name="P:GdNet.Common.Services.OperationResult.Message">
-            <summary>
-            The message output of the operation. It could be error message if Result is false
             </summary>
         </member>
         <member name="T:GdNet.Common.Services.SimpleFileService">

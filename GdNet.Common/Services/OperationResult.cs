@@ -1,9 +1,30 @@
 namespace GdNet.Common.Services
 {
     /// <summary>
+    /// Represent result of an operation with result default to object type
+    /// </summary>
+    public class OperationResult : OperationResult<object>
+    {
+        /// <summary>
+        /// Instantiate an instance with result to false
+        /// </summary>
+        public OperationResult()
+        {
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public OperationResult(bool result)
+            : base(result)
+        {
+        }
+    }
+
+    /// <summary>
     /// Represent result of an operation
     /// </summary>
-    public class OperationResult
+    public class OperationResult<T> where T : class
     {
         /// <summary>
         /// Result of the operation
@@ -13,7 +34,7 @@ namespace GdNet.Common.Services
         /// <summary>
         /// Output data returns by the operation
         /// </summary>
-        public object Data { get; set; }
+        public T Data { get; set; }
 
         /// <summary>
         /// The message output of the operation. It could be error message if Result is false
