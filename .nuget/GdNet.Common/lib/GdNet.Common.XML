@@ -316,7 +316,7 @@
         </member>
         <member name="M:GdNet.Common.Services.SimpleFileService.SaveFile(System.String,System.String)">
             <summary>
-            Save string into a file
+            Save a string into a file
             </summary>
         </member>
         <member name="M:GdNet.Common.Services.SimpleFileService.GetFile(System.String)">
