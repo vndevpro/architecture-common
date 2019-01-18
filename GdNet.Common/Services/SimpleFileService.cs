@@ -19,13 +19,19 @@ namespace GdNet.Common.Services
         }
 
         /// <summary>
-        /// Save string into a file
+        /// Save a string into a file
         /// </summary>
         public OperationResult SaveFile(string virtualFilePath, string body)
         {
             try
             {
                 var filePath = Path.Combine(_rootFolder, virtualFilePath);
+
+                var directoryName = Path.GetDirectoryName(filePath);
+                if (!string.IsNullOrWhiteSpace(directoryName) && !Directory.Exists(directoryName))
+                {
+                    Directory.CreateDirectory(directoryName);
+                }
 
                 File.WriteAllText(filePath, body);
 
