@@ -125,6 +125,56 @@
             Zero based page index
             </summary>
         </member>
+        <member name="T:GdNet.Common.RandomString">
+            <summary>
+            Generate new random string with difference options
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.RandomString.#ctor">
+            <summary>
+            New instance with default options (Length = 6 and only Numbers)
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.RandomString.#ctor(System.Int32,GdNet.Common.RandomString.Options)">
+            <summary>
+            New instance with custom options
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.RandomString.NextValue">
+            <summary>
+            Generate new random string with given options
+            </summary>
+        </member>
+        <member name="T:GdNet.Common.RandomString.Options">
+            <summary>
+            Options use to generate new random string
+            </summary>
+        </member>
+        <member name="F:GdNet.Common.RandomString.Options.Numbers">
+            <summary>
+            Generate only numbers
+            </summary>
+        </member>
+        <member name="F:GdNet.Common.RandomString.Options.LowerChars">
+            <summary>
+            Generate only lower characters
+            </summary>
+        </member>
+        <member name="F:GdNet.Common.RandomString.Options.UpperChars">
+            <summary>
+            Generate only upper characters
+            </summary>
+        </member>
+        <member name="F:GdNet.Common.RandomString.Options.SpecialChars">
+            <summary>
+            Generate only special characters
+            </summary>
+        </member>
+        <member name="F:GdNet.Common.RandomString.Options.Any">
+            <summary>
+            Expect any characters
+            </summary>
+        </member>
         <member name="T:GdNet.Common.ReflectionExtensions">
             <summary>
             Extension methods on reflection

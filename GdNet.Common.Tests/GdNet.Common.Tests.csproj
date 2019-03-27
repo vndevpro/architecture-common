@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Base64SafeEncoderTests.cs" />
     <Compile Include="EmailMaskerTests.cs" />
+    <Compile Include="RandomStringTests.cs" />
     <Compile Include="SimpleFileServiceTests.cs" />
     <Compile Include="StringExtensionsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

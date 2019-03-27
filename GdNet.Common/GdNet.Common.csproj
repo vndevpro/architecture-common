@@ -45,6 +45,7 @@
     <Compile Include="GuidExtensions.cs" />
     <Compile Include="ObjectExtensions.cs" />
     <Compile Include="PageExtensions.cs" />
+    <Compile Include="RandomString.cs" />
     <Compile Include="ReflectionExtensions.cs" />
     <Compile Include="ResultExtensions.cs" />
     <Compile Include="Services\Base64SafeEncoder.cs" />
