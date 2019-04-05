@@ -69,6 +69,67 @@
             Gets or sets dynamic properties dictionary as string
             </summary>
         </member>
+        <member name="T:GdNet.Common.Entities.IEntity">
+            <summary>
+            Entity base interface
+            </summary>
+        </member>
+        <member name="P:GdNet.Common.Entities.IEntity.Id">
+            <summary>
+            Id of the entity
+            </summary>
+        </member>
+        <member name="P:GdNet.Common.Entities.IEntity.CreatedAt">
+            <summary>
+            The date that entity was created
+            </summary>
+        </member>
+        <member name="P:GdNet.Common.Entities.IEntity.CreatedBy">
+            <summary>
+            Who created it
+            </summary>
+        </member>
+        <member name="P:GdNet.Common.Entities.IEntity.UpdatedAt">
+            <summary>
+            The date that entity was updated
+            </summary>
+        </member>
+        <member name="P:GdNet.Common.Entities.IEntity.UpdatedBy">
+            <summary>
+            Who updated it
+            </summary>
+        </member>
+        <member name="T:GdNet.Common.Entities.Repositories.IRepositoryBase`1">
+            <summary>
+            Repository base class
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.Entities.Repositories.IRepositoryBase`1.GetById(System.Int32)">
+            <summary>
+            Get by id of entity, will throw an exception if it doesn't exist
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.Entities.Repositories.IRepositoryBase`1.GetAll">
+            <summary>
+            Get all entities
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GdNet.Common.Entities.Repositories.IRepositoryBase`1.GetAllBy(System.String,System.Object)">
+            <summary>
+            Search for entities
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.Entities.Repositories.IRepositoryBase`1.CreateOrUpdate(`0)">
+            <summary>
+            Create or update an entity
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.Entities.Repositories.IRepositoryBase`1.DeleteById(System.Int32)">
+            <summary>
+            Delete an entity
+            </summary>
+        </member>
         <member name="T:GdNet.Common.FileSizeExtensions">
             <summary>
             Format file size from byte to most relevent unit

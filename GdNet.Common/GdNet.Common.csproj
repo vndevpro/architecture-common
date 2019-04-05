@@ -40,6 +40,8 @@
     <Compile Include="Direction.cs" />
     <Compile Include="Entities\DynPropertyEntityBase.cs" />
     <Compile Include="Entities\IDynPropertyEntity.cs" />
+    <Compile Include="Entities\IEntity.cs" />
+    <Compile Include="Entities\Repositories\IRepositoryBase.cs" />
     <Compile Include="FileSizeExtensions.cs" />
     <Compile Include="FileSizeUnit.cs" />
     <Compile Include="GuidExtensions.cs" />
