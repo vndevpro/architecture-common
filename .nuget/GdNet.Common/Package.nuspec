@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>GdNet.Common</id>
-    <version>2.8.0</version>
+    <version>2.8.1</version>
     <title>GdNet.Common</title>
     <authors>RabbitSoftware</authors>
     <owners>junioho</owners>
@@ -11,6 +11,7 @@
       Github source: https://github.com/vndevpro/architecture-common
     </description>
     <releaseNotes>
+	  Version 2.8.1: Add Time extension methods
 	  Version 2.8.0: Add Repository interface
 	  Version 2.7.0: Add RandomString class
       Version 2.6.0: Add Base64SafeEncoder
@@ -47,7 +48,7 @@
     <iconUrl>https://nuget.org/Content/Images/packageDefaultIcon-50x50.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>http://opensource.org/licenses/Apache-2.0</licenseUrl>
-    <copyright>Copyright @RabbitSoftware 2015-2018</copyright>
+    <copyright>Copyright @RabbitSoftware 2015-2019</copyright>
     <dependencies>
     </dependencies>
     <references></references>

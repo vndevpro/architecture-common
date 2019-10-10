@@ -39,19 +39,14 @@
             Base class for entities support to define new properties dynamically (values are stored in a dictionary)
             </summary>
         </member>
-        <member name="T:GdNet.Common.Entities.IDynPropertyEntity">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:GdNet.Common.Entities.IDynPropertyEntity.MetadataXml">
-            <summary>
-            Xml data for all dyn properties
-            </summary>
-        </member>
         <member name="F:GdNet.Common.Entities.DynPropertyEntityBase._metadata">
             <summary>
             Dictionary contains all dyn properties
+            </summary>
+        </member>
+        <member name="P:GdNet.Common.Entities.DynPropertyEntityBase.MetadataXml">
+            <summary>
+            Gets or sets dynamic properties dictionary as string
             </summary>
         </member>
         <member name="M:GdNet.Common.Entities.DynPropertyEntityBase.SetProperty(System.String,System.String)">
@@ -64,9 +59,14 @@
             Get value of a property
             </summary>
         </member>
-        <member name="P:GdNet.Common.Entities.DynPropertyEntityBase.MetadataXml">
+        <member name="T:GdNet.Common.Entities.IDynPropertyEntity">
             <summary>
-            Gets or sets dynamic properties dictionary as string
+            
+            </summary>
+        </member>
+        <member name="P:GdNet.Common.Entities.IDynPropertyEntity.MetadataXml">
+            <summary>
+            Xml data for all dyn properties
             </summary>
         </member>
         <member name="T:GdNet.Common.Entities.IEntity">
@@ -191,21 +191,6 @@
             Generate new random string with difference options
             </summary>
         </member>
-        <member name="M:GdNet.Common.RandomString.#ctor">
-            <summary>
-            New instance with default options (Length = 6 and only Numbers)
-            </summary>
-        </member>
-        <member name="M:GdNet.Common.RandomString.#ctor(System.Int32,GdNet.Common.RandomString.Options)">
-            <summary>
-            New instance with custom options
-            </summary>
-        </member>
-        <member name="M:GdNet.Common.RandomString.NextValue">
-            <summary>
-            Generate new random string with given options
-            </summary>
-        </member>
         <member name="T:GdNet.Common.RandomString.Options">
             <summary>
             Options use to generate new random string
@@ -234,6 +219,21 @@
         <member name="F:GdNet.Common.RandomString.Options.Any">
             <summary>
             Expect any characters
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.RandomString.#ctor">
+            <summary>
+            New instance with default options (Length = 6 and only Numbers)
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.RandomString.#ctor(System.Int32,GdNet.Common.RandomString.Options)">
+            <summary>
+            New instance with custom options
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.RandomString.NextValue">
+            <summary>
+            Generate new random string with given options
             </summary>
         </member>
         <member name="T:GdNet.Common.ReflectionExtensions">
@@ -305,16 +305,6 @@
             Masking email address by replacing 50% of characters by asterik
             </summary>
         </member>
-        <member name="T:GdNet.Common.Services.IEmailMaskingWorker">
-            <summary>
-            Masking worker contract
-            </summary>
-        </member>
-        <member name="M:GdNet.Common.Services.IEmailMaskingWorker.Mask(System.String)">
-            <summary>
-            Masking a given email address
-            </summary>
-        </member>
         <member name="M:GdNet.Common.Services.WorkersImpl.DefaultEmailMaskingWorker.Mask(System.String)">
             <summary>
             Replace 50% of characters by asterik(s). Eg myemail@devcovery.com will be my***il@devcovery.com
@@ -325,19 +315,9 @@
             Encrypt and decrypt a string
             </summary>
         </member>
-        <member name="T:GdNet.Common.Services.IStringEncryptionWorker">
+        <member name="T:GdNet.Common.Services.WorkersImpl.StringCipher">
             <summary>
-            Encrypt and decrypt a string
-            </summary>
-        </member>
-        <member name="M:GdNet.Common.Services.IStringEncryptionWorker.Encrypt(System.String,System.String)">
-            <summary>
-            Encrypt a string
-            </summary>
-        </member>
-        <member name="M:GdNet.Common.Services.IStringEncryptionWorker.Decrypt(System.String,System.String)">
-            <summary>
-            Decrypt a string
+            Source code is from https://stackoverflow.com/a/10177020/4903729
             </summary>
         </member>
         <member name="T:GdNet.Common.Services.EmailMasker">
@@ -351,6 +331,16 @@
             </summary>
         </member>
         <member name="M:GdNet.Common.Services.EmailMasker.Mask(System.String,GdNet.Common.Services.IEmailMaskingWorker)">
+            <summary>
+            Masking a given email address
+            </summary>
+        </member>
+        <member name="T:GdNet.Common.Services.IEmailMaskingWorker">
+            <summary>
+            Masking worker contract
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.Services.IEmailMaskingWorker.Mask(System.String)">
             <summary>
             Masking a given email address
             </summary>
@@ -370,24 +360,39 @@
             Get content of the file from its virtual path
             </summary>
         </member>
+        <member name="T:GdNet.Common.Services.IStringEncryptionWorker">
+            <summary>
+            Encrypt and decrypt a string
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.Services.IStringEncryptionWorker.Encrypt(System.String,System.String)">
+            <summary>
+            Encrypt a string
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.Services.IStringEncryptionWorker.Decrypt(System.String,System.String)">
+            <summary>
+            Decrypt a string
+            </summary>
+        </member>
         <member name="T:GdNet.Common.Services.OperationResult">
             <summary>
             Represent result of an operation with result default to object type
             </summary>
         </member>
-        <member name="T:GdNet.Common.Services.OperationResult`1">
-            <summary>
-            Represent result of an operation
-            </summary>
-        </member>
-        <member name="M:GdNet.Common.Services.OperationResult`1.#ctor">
+        <member name="M:GdNet.Common.Services.OperationResult.#ctor">
             <summary>
             Instantiate an instance with result to false
             </summary>
         </member>
-        <member name="M:GdNet.Common.Services.OperationResult`1.#ctor(System.Boolean)">
+        <member name="M:GdNet.Common.Services.OperationResult.#ctor(System.Boolean)">
             <summary>
             
+            </summary>
+        </member>
+        <member name="T:GdNet.Common.Services.OperationResult`1">
+            <summary>
+            Represent result of an operation
             </summary>
         </member>
         <member name="P:GdNet.Common.Services.OperationResult`1.Result">
@@ -405,12 +410,12 @@
             The message output of the operation. It could be error message if Result is false
             </summary>
         </member>
-        <member name="M:GdNet.Common.Services.OperationResult.#ctor">
+        <member name="M:GdNet.Common.Services.OperationResult`1.#ctor">
             <summary>
             Instantiate an instance with result to false
             </summary>
         </member>
-        <member name="M:GdNet.Common.Services.OperationResult.#ctor(System.Boolean)">
+        <member name="M:GdNet.Common.Services.OperationResult`1.#ctor(System.Boolean)">
             <summary>
             
             </summary>
@@ -433,11 +438,6 @@
         <member name="M:GdNet.Common.Services.SimpleFileService.GetFile(System.String)">
             <summary>
             Read all text from given file
-            </summary>
-        </member>
-        <member name="T:GdNet.Common.Services.WorkersImpl.StringCipher">
-            <summary>
-            Source code is from https://stackoverflow.com/a/10177020/4903729
             </summary>
         </member>
         <member name="T:GdNet.Common.Services.StringEncryptor">
@@ -485,6 +485,16 @@
             Convert unicode string to ascii
             </summary>
         </member>
+        <member name="T:GdNet.Common.TimeExtensions">
+            <summary>
+            Extension method for time types
+            </summary>
+        </member>
+        <member name="M:GdNet.Common.TimeExtensions.ToNumber(System.TimeSpan)">
+            <summary>
+            Get integer representation of a timespan. Eg 012010 => 1 hour 20 minutes 10 seconds
+            </summary>
+        </member>
         <member name="T:GdNet.Common.TypeExtensions">
             <summary>
             
@@ -499,13 +509,6 @@
             <summary>
             Pagination info
             </summary>
-        </member>
-        <member name="M:GdNet.Common.Page.#ctor(System.Int32,System.Int32)">
-            <summary>
-            
-            </summary>
-            <param name="pageIndex"></param>
-            <param name="itemsPerPage"></param>
         </member>
         <member name="P:GdNet.Common.Page.AllItems">
             <summary>
@@ -527,6 +530,13 @@
             Number of items to be fetched
             </summary>
         </member>
+        <member name="M:GdNet.Common.Page.#ctor(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="pageIndex"></param>
+            <param name="itemsPerPage"></param>
+        </member>
         <member name="T:GdNet.Common.Result`1">
             <summary>
             Object to hold a page of items
@@ -536,6 +546,16 @@
         <member name="F:GdNet.Common.Result`1.Empty">
             <summary>
             An empty page of items
+            </summary>
+        </member>
+        <member name="P:GdNet.Common.Result`1.Items">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:GdNet.Common.Result`1.Total">
+            <summary>
+            Total number of items in data source
             </summary>
         </member>
         <member name="M:GdNet.Common.Result`1.#ctor(System.Collections.Generic.IEnumerable{`0})">
@@ -549,16 +569,6 @@
             
             </summary>
             <param name="items"></param>
-        </member>
-        <member name="P:GdNet.Common.Result`1.Items">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:GdNet.Common.Result`1.Total">
-            <summary>
-            Total number of items in data source
-            </summary>
         </member>
         <member name="T:GdNet.Common.XmlExtensions">
             <summary>

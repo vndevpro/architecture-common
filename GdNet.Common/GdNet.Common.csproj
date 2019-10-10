@@ -62,6 +62,7 @@
     <Compile Include="Services\WorkersImpl\StringCipher.cs" />
     <Compile Include="Services\StringEncryptor.cs" />
     <Compile Include="StringExtensions.cs" />
+    <Compile Include="TimeExtensions.cs" />
     <Compile Include="TypeExtensions.cs" />
     <Compile Include="Page.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
