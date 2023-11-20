@@ -1,0 +1,52 @@
+name: ci-build
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    
+    - name: Install netfx-4.8
+      run: choco install netfx-4.8
+  
+    - name: Get .NET FX versions
+      shell: pwsh
+      run: |
+        Get-ChildItem 'HKLM:\SOFTWARE\Microsoft\NET Framework Setup\NDP' -Recurse | Get-ItemProperty -Name version -EA 0 | Where { $_.PSChildName -Match '^(?!S)\p{L}'} | Select PSChildName, Version
+
+    - name: Get MSBuildToolsPath
+      shell: pwsh
+      run: Resolve-Path HKLM:\SOFTWARE\Microsoft\MSBuild\ToolsVersions\* | Get-ItemProperty -Name MSBuildToolsPath
+    
+    - name: Get latest MSBuildPath
+      shell: pwsh
+      run: |
+        $MSBuildPath = Get-ChildItem 'HKLM:\SOFTWARE\Microsoft\MSBuild\ToolsVersions\' | 
+          Get-ItemProperty -Name MSBuildToolsPath | 
+          Sort-Object PSChildName -Descending | 
+          Select-Object -ExpandProperty MSBuildToolsPath -First 1
+        
+        "MSBuildPath=" + $MSBuildPath >> $env:GITHUB_ENV
+        
+    - name: Checkout the repo
+      uses: actions/checkout@v4
+
+    - name: Nuget restore
+      shell: pwsh
+      run: |
+        cd ${{ github.workspace }}
+        .\.nuget\NuGet.exe  restore ${{ github.workspace }}/Common.sln
+        
+    - name: Build the solution
+      shell: pwsh
+      run: |
+        cd ${{ env.MSBuildPath }}
+        .\MSBuild.exe /p:Configuration=Debug /detailedsummary ${{ github.workspace }}/Common.sln
