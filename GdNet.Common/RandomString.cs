@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Text;
 
 namespace GdNet.Common
@@ -13,7 +14,7 @@ namespace GdNet.Common
         private const string LowerChars = "abcdefgijkmnopqrstwxyz";
         private const string UpperChars = "ABCDEFGHJKLMNPQRSTWXYZ";
         private const string Numbers = "0123456789";
-        private const string SpecialChars = "!@#$%^&*()+=?/";
+        private const string SpecialChars = "~!@#$%^&*()-_+={}[]:;?<>";
 
         private readonly string _allChars;
 
@@ -72,9 +73,26 @@ namespace GdNet.Common
         /// </summary>
         public string NextValue()
         {
+            return InternalGetNextValue(new StringBuilder(), new Random());
+        }
+
+        /// <summary>
+        /// Generate a number of random strings
+        /// </summary>
+        public IEnumerable<string> NextValues(int count)
+        {
             var sb = new StringBuilder();
             var random = new Random();
 
+            for (int i = 0; i < count; i++)
+            {
+                sb.Clear();
+                yield return InternalGetNextValue(sb, random);
+            }
+        }
+
+        private string InternalGetNextValue(StringBuilder sb, Random random)
+        {
             while (sb.Length < _length)
             {
                 var index = random.Next(_allChars.Length);

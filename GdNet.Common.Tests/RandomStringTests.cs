@@ -35,5 +35,21 @@ namespace GdNet.Common.Tests
 
             Assert.AreEqual(12, x.Length);
         }
+
+        [TestMethod]
+        public void CanGetNextValuesAnyCharacters()
+        {
+            var generator = new RandomString(12, RandomString.Options.Any);
+
+            int count = 0;
+
+            foreach (var x in generator.NextValues(3))
+            {
+                count += 1;
+                Assert.AreEqual(12, x.Length);
+            }
+
+            Assert.AreEqual(3, count);
+        }
     }
 }

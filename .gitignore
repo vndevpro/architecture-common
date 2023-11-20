@@ -167,3 +167,4 @@ $RECYCLE.BIN/
 /.vs/Common/v15/Server/sqlite3
 *.nupkg
 *.bak
+/.vs/Common
