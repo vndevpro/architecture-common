@@ -48,7 +48,7 @@ namespace GdNet.Common
                 return ((MemberExpression)unary.Operand).Member.Name;
             }
 
-            throw new ApplicationException("Cannot get property name from expression " + exp.ToString());
+            throw new ApplicationException($"Cannot get property name from expression {exp.ToString()}");
         }
     }
 }

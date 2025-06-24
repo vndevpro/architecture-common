@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7BA9E02C-C95D-48EA-867E-E553F390A7A5}</ProjectGuid>
+    <ProjectGuid>{7169EEE1-5C9E-47F8-8E29-75812280B11B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>GdNet.Common.Tests</RootNamespace>
@@ -50,22 +50,19 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
-    <Compile Include="Base64SafeEncoderTests.cs" />
-    <Compile Include="EmailMaskerTests.cs" />
     <Compile Include="RandomStringTests.cs" />
-    <Compile Include="SimpleFileServiceTests.cs" />
     <Compile Include="StringExtensionsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TimeExtensionsTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GdNet.Common\GdNet.Common.csproj">
-      <Project>{7449aa82-a58b-4824-9e35-928dd82373ed}</Project>
-      <Name>GdNet.Common</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <ProjectReference Include="..\GdNetCommon\GdNetCommon.csproj">
+      <Project>{5abe9244-bb4f-4eb9-bed1-c1f4cb997def}</Project>
+      <Name>GdNetCommon</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

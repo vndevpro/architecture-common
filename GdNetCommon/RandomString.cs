@@ -9,14 +9,13 @@ namespace GdNet.Common
     /// </summary>
     public class RandomString
     {
-        private readonly int _length;
+        protected readonly int _length;
+        protected readonly string _allChars;
 
-        private const string LowerChars = "abcdefgijkmnopqrstwxyz";
-        private const string UpperChars = "ABCDEFGHJKLMNPQRSTWXYZ";
-        private const string Numbers = "0123456789";
-        private const string SpecialChars = "~!@#$%^&*()-_+={}[]:;?<>";
-
-        private readonly string _allChars;
+        public const string LowerChars = "abcdefgijkmnopqrstwxyz";
+        public const string UpperChars = "ABCDEFGHJKLMNPQRSTWXYZ";
+        public const string Numbers = "0123456789";
+        public const string SpecialChars = "~!@#$%^&*()-_+={}[]:;?<>";
 
         /// <summary>
         /// Options use to generate new random string
@@ -61,7 +60,7 @@ namespace GdNet.Common
         {
             if (length < 3)
             {
-                throw new ArgumentException("Length must not less than 3");
+                throw new ArgumentException($"{nameof(length)} must be at least 3");
             }
 
             _length = length;
@@ -69,37 +68,31 @@ namespace GdNet.Common
         }
 
         /// <summary>
-        /// Generate new random string with given options
+        /// Generate a number of random strings
         /// </summary>
-        public string NextValue()
+        public IEnumerable<string> NextValues(int counter)
         {
-            return InternalGetNextValue(new StringBuilder(), new Random());
+            for (int i = 0; i < counter; i++)
+            {
+                yield return NextValue();
+            }
         }
 
         /// <summary>
-        /// Generate a number of random strings
+        /// Generate a new random string
         /// </summary>
-        public IEnumerable<string> NextValues(int count)
+        public string NextValue()
         {
-            var sb = new StringBuilder();
+            var result = string.Empty;
             var random = new Random();
 
-            for (int i = 0; i < count; i++)
-            {
-                sb.Clear();
-                yield return InternalGetNextValue(sb, random);
-            }
-        }
-
-        private string InternalGetNextValue(StringBuilder sb, Random random)
-        {
-            while (sb.Length < _length)
+            while (result.Length < _length)
             {
                 var index = random.Next(_allChars.Length);
-                sb.Append(_allChars[index]);
+                result = string.Concat(result, _allChars[index]);
             }
 
-            return sb.ToString();
+            return result;
         }
 
         private string BuildAllChars(Options options)

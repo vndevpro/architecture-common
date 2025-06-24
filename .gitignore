@@ -169,3 +169,7 @@ $RECYCLE.BIN/
 *.bak
 /.vs/Common
 /packages/MicrosoftVisualStudioQualityToolsUnitTestFramework.1.0.2
+/.vs/ProjectEvaluation
+/GdNet.Common/.vs
+/GdNet.Common.Tests/.vs
+/GdNetCommonTests/.vs

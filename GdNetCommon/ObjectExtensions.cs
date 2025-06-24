@@ -5,7 +5,7 @@ using System.Dynamic;
 namespace GdNet.Common
 {
     /// <summary>
-    /// Extension methods for Object
+    /// Extension methods for Object type
     /// </summary>
     public static class ObjectExtensions
     {
@@ -23,6 +23,16 @@ namespace GdNet.Common
             }
 
             return expando;
+        }
+
+        public static bool IsNull(this object obj)
+        {
+            return obj == null;
+        }
+
+        public static bool IsNotNull(this object obj)
+        {
+            return obj != null;
         }
     }
 }

@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace GdNet.Common
 {
     /// <summary>
-    /// 
+    /// Extension methods for Type object
     /// </summary>
     public static class TypeExtensions
     {
@@ -31,23 +30,8 @@ namespace GdNet.Common
 
         public static string GetFirstGenericTypeName(this Type genericType)
         {
-            var argumentType = genericType.GenericTypeArguments.First();
-            return argumentType.CalculateSafeTableName();
-        }
-
-        private static string CalculateSafeTableName(this Type type)
-        {
-            var typeName = type.Name;
-
-            var sqlObjectNames = new List<string>
-            {
-                "user",
-                "file"
-            };
-
-            return sqlObjectNames.Any(x => string.Equals(x, typeName, StringComparison.InvariantCultureIgnoreCase))
-                ? string.Format("[{0}]", typeName)
-                : typeName;
+            var argumentType = genericType.GenericTypeArguments.FirstOrDefault();
+            return argumentType?.Name;
         }
     }
 }
