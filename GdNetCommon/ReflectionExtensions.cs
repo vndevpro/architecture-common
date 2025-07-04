@@ -31,7 +31,19 @@ namespace GdNet.Common
         /// </summary>
         public static string GetPropertyName<T>(this Expression<Func<T, object>> property)
         {
-            return property.Body.GetPropertyName();
+            var propertyName = property.Body.GetPropertyName();
+
+            if (propertyName.EndsWith(", Nullable`1)"))
+            {
+                return propertyName.Substring(0, propertyName.Length - 13);
+            }
+
+            if (propertyName.EndsWith(", Object)"))
+            {
+                return propertyName.Substring(0, propertyName.Length - 9);
+            }
+
+            return propertyName;
         }
 
         private static string GetPropertyName(this Expression exp)

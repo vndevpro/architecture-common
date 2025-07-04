@@ -19,5 +19,23 @@ namespace GdNet.Common
         {
             return Guid.ParseExact(shortGuidString, "N");
         }
+
+        /// <summary>
+        /// Parse short string of GUID to Guid object. If the string is null or empty or invalid, return Guid.Empty.
+        /// </summary>
+        public static Guid ToGuidSafe(this string shortGuidString)
+        {
+            if (string.IsNullOrWhiteSpace(shortGuidString))
+            {
+                return Guid.Empty;
+            }
+
+            if (Guid.TryParseExact(shortGuidString, "N", out var result))
+            {
+                return result;
+            }
+
+            return Guid.Empty;
+        }
     }
 }

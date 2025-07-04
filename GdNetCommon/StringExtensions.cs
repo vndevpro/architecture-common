@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace GdNet.Common
 {
@@ -47,6 +48,11 @@ namespace GdNet.Common
             };
 
             return string.Join(string.Empty, fileName.Where(x => !ignoreCharacters.Contains(x)));
+        }
+
+        public static bool IsValidEmail(this string email)
+        {
+            return Regex.IsMatch(email, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$", RegexOptions.Compiled);
         }
     }
 }

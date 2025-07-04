@@ -5,4 +5,8 @@
     <RootNamespace>GdNet.Common</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="ReflectionExtensions.cs~RF14dba353.TMP" />
+  </ItemGroup>
+
 </Project>
