@@ -52,7 +52,8 @@
   <ItemGroup>
     <Compile Include="ObjectExtensionsTests\IsNotNullTests.cs" />
     <Compile Include="ObjectExtensionsTests\IsNullTests.cs" />
-    <Compile Include="RandomStringTests.cs" />
+    <Compile Include="RandomStringTests\NextValuesTests.cs" />
+    <Compile Include="RandomStringTests\NextValueTests.cs" />
     <Compile Include="StringExtensionsTests\IsNotNullOrEmptyTests.cs" />
     <Compile Include="StringExtensionsTests\IsNotNullOrWhiteSpaceTests.cs" />
     <Compile Include="StringExtensionsTests\TrimSafeTests.cs" />

@@ -3,6 +3,8 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>GdNet.Common</RootNamespace>
+    <Title>GdNet.Common APIs and classes</Title>
+    <RepositoryUrl>https://github.com/vndevpro/MiniProfiler.Integrations</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>

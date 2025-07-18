@@ -9,8 +9,8 @@ namespace GdNet.Common
     /// </summary>
     public class RandomString
     {
-        protected readonly int _length;
-        protected readonly string _allChars;
+        protected readonly int Length;
+        protected readonly StringBuilder AllChars = new StringBuilder();
 
         public const string LowerChars = "abcdefgijkmnopqrstwxyz";
         public const string UpperChars = "ABCDEFGHJKLMNPQRSTWXYZ";
@@ -58,13 +58,40 @@ namespace GdNet.Common
         /// </summary>
         public RandomString(int length, Options options)
         {
-            if (length < 3)
             {
-                throw new ArgumentException($"{nameof(length)} must be at least 3");
+                ValidateInput();
+
+                Length = length;
+                BuildAllChars();
             }
 
-            _length = length;
-            _allChars = BuildAllChars(options);
+            void ValidateInput()
+            {
+                if (length < 3)
+                {
+                    throw new ArgumentException($"{nameof(length)} must be at least 3");
+                }
+            }
+
+            void BuildAllChars()
+            {
+                if (options.HasFlag(Options.Numbers))
+                {
+                    AllChars.Append(Numbers);
+                }
+                if (options.HasFlag(Options.LowerChars))
+                {
+                    AllChars.Append(LowerChars);
+                }
+                if (options.HasFlag(Options.UpperChars))
+                {
+                    AllChars.Append(UpperChars);
+                }
+                if (options.HasFlag(Options.SpecialChars))
+                {
+                    AllChars.Append(SpecialChars);
+                }
+            }
         }
 
         /// <summary>
@@ -86,37 +113,13 @@ namespace GdNet.Common
             var result = string.Empty;
             var random = new Random();
 
-            while (result.Length < _length)
+            while (result.Length < Length)
             {
-                var index = random.Next(_allChars.Length);
-                result = string.Concat(result, _allChars[index]);
+                var index = random.Next(AllChars.Length);
+                result = string.Concat(result, AllChars[index]);
             }
 
             return result;
-        }
-
-        private string BuildAllChars(Options options)
-        {
-            var allChars = new StringBuilder();
-
-            if (options.HasFlag(Options.Numbers))
-            {
-                allChars.Append(Numbers);
-            }
-            if (options.HasFlag(Options.LowerChars))
-            {
-                allChars.Append(LowerChars);
-            }
-            if (options.HasFlag(Options.UpperChars))
-            {
-                allChars.Append(UpperChars);
-            }
-            if (options.HasFlag(Options.SpecialChars))
-            {
-                allChars.Append(SpecialChars);
-            }
-
-            return allChars.ToString();
         }
     }
 }
