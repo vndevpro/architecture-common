@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GdNetCommon", "GdNetCommon\GdNetCommon.csproj", "{5ABE9244-BB4F-4EB9-BED1-C1F4CB997DEF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GdNet.Common", "GdNetCommon\GdNet.Common.csproj", "{5ABE9244-BB4F-4EB9-BED1-C1F4CB997DEF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GdNetCommonTests", "GdNetCommonTests\GdNetCommonTests.csproj", "{7169EEE1-5C9E-47F8-8E29-75812280B11B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GdNet.Common.Tests", "GdNetCommonTests\GdNet.Common.Tests.csproj", "{7169EEE1-5C9E-47F8-8E29-75812280B11B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
