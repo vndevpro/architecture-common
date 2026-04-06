@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Dynamic;
 
@@ -30,9 +31,9 @@ namespace GdNet.Common
             return obj == null;
         }
 
-        public static bool IsNotNull(this object obj)
+        public static bool IsNullOrDefault<T>(this T obj)
         {
-            return obj != null;
+            return obj == null || Object.Equals(obj, default(T));
         }
     }
 }
