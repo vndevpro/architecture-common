@@ -18,17 +18,6 @@ namespace GdNet.Common
         }
 
         /// <summary>
-        /// Check if a collection is not null or empty
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="collection"></param>
-        /// <returns>True if collection is not null and has at least one element. Otherwise false.</returns>
-        public static bool IsNotNullOrEmpty<T>(this IEnumerable<T> collection)
-        {
-            return collection != null && collection.Any();
-        }
-
-        /// <summary>
         /// Projects safely each element of a sequence into a new form. Returns an empty collection if the input collection is null or empty
         /// </summary>
         /// <typeparam name="T"></typeparam>

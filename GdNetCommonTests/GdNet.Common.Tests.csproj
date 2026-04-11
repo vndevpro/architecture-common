@@ -50,7 +50,6 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
-    <Compile Include="ObjectExtensionsTests\IsNotNullTests.cs" />
     <Compile Include="ObjectExtensionsTests\IsNullTests.cs" />
     <Compile Include="RandomStringTests\NextValuesTests.cs" />
     <Compile Include="RandomStringTests\NextValueTests.cs" />
