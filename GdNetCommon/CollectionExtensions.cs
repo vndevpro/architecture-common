@@ -34,5 +34,36 @@ namespace GdNet.Common
 
             return collection.Select(selector);
         }
+
+        /// <summary>
+        /// Add item to the list if the condition is true. Otherwise do nothing.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="collection"></param>
+        /// <param name="item"></param>
+        /// <param name="condition"></param>
+        /// <returns></returns>
+        public static IList<T> AddIf<T>(this IList<T> collection, T item, bool condition)
+        {
+            if (condition)
+            {
+                collection.Add(item);
+            }
+
+            return collection;
+        }
+
+        /// <summary>
+        /// Add item to the list if the condition is true. Otherwise do nothing.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="collection"></param>
+        /// <param name="item"></param>
+        /// <param name="condition"></param>
+        /// <returns></returns>
+        public static IList<T> AddIf<T>(this IList<T> collection, T item, Func<T, bool> condition)
+        {
+            return collection.AddIf(item, condition(item));
+        }
     }
 }
